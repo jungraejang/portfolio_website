@@ -1,26 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import logo from "./logo.svg";
+import "./App.css";
+import MainPage from "./components/MainPage/MainPage";
+import NavBar from "./components/NavBar/NavBar";
+import Intro from "./components/Intro/Intro";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import computerSound from "./assets/computerSound.mp3";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      random: "lalalala",
+      pageHeight: 0,
+      pageWidth: 0,
+      introLoaded: false
+    };
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
+    this.loadingComplete();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({
+      pageWidth: window.innerWidth,
+      pageHeight: window.innerHeight
+    });
+  };
+
+  loadingComplete = () => {
+    setTimeout(() => {
+      this.setState({
+        introLoaded: true
+      });
+    }, 6000);
+  };
+
+  render() {
+    return (
+      <div
+        className="App"
+        style={{ height: this.state.pageHeight, width: this.state.pageWidth }}
+      >
+      <div className="crt" style={{ height: this.state.pageHeight, width: this.state.pageWidth}}>
+        <audio src={computerSound} style={{ display: "none" }} autoPlay />
+        {this.state.introLoaded ? null : <Intro />}
+        {this.state.introLoaded ? <MainPage /> : null}
+        {this.state.introLoaded ? <NavBar /> : null}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

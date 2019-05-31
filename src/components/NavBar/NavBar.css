@@ -1,0 +1,31 @@
+.navlink {
+  font-family: 'Press Start 2P', cursive;
+  color: #07FAFA;
+  font-size: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.navbar {
+  width: 60%;
+  height: 10%;
+  border: 2px solid #39D202;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+ /* .navbar {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+ } */
