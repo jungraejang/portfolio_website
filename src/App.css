@@ -244,6 +244,7 @@ table {
 }
 .crt {
   animation: textShadow 1.6s infinite;
+  background-color: #1600FF;
   display: flex;
   flex-direction: column;
   justify-content: center;

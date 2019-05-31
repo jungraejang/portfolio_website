@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import Sound from 'react-sound';
 import logo from "./logo.svg";
 import "./App.css";
 import MainPage from "./components/MainPage/MainPage";
@@ -51,8 +52,13 @@ class App extends React.Component {
         style={{ height: this.state.pageHeight, width: this.state.pageWidth }}
       >
       <div className="crt" style={{ height: this.state.pageHeight, width: this.state.pageWidth}}>
-        <audio src={computerSound} style={{ display: "none" }} autoPlay />
-        {this.state.introLoaded ? null : <Intro />}
+      <Sound
+            url={computerSound}
+            playStatus={Sound.status.PLAYING}
+            onLoading={this.handleSongLoading}
+            onPlaying={this.handleSongPlaying}
+            onFinishedPlaying={this.handleSongFinishedPlaying}
+          />        {this.state.introLoaded ? null : <Intro />}
         {this.state.introLoaded ? <MainPage /> : null}
         {this.state.introLoaded ? <NavBar /> : null}
         </div>
