@@ -10,14 +10,14 @@ import "./NavBar.css";
         <NavLink
           style={{ textDecoration: "none" }}
           className="navlink"
-          to={"/"}
+          to={process.env.PUBLIC_URL + '/'}
         >
           Home
         </NavLink>
         <NavLink
           style={{ textDecoration: "none" }}
           className="navlink"
-          to={"/about"}
+          to={process.env.PUBLIC_URL + '/about'}
 
         >
           About Me
