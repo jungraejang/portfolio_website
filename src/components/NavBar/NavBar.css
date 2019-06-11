@@ -1,9 +1,12 @@
 .navlink {
   font-family: 'Press Start 2P', cursive;
-  color: #07FAFA;
+  color: white;
   font-size: 20px;
   width: 100%;
-  height: auto;
+}
+
+.navlink:hover {
+  color: red;
 }
 
 .navbar {

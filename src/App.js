@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Sound from 'react-sound';
+import Sound from "react-sound";
 import logo from "./logo.svg";
 import "./App.css";
 import MainPage from "./components/MainPage/MainPage";
+import AboutPage from "./components/About/About"
 import NavBar from "./components/NavBar/NavBar";
 import Intro from "./components/Intro/Intro";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -42,7 +43,7 @@ class App extends React.Component {
       this.setState({
         introLoaded: true
       });
-    }, 6000);
+    }, 5500);
   };
 
   render() {
@@ -51,16 +52,26 @@ class App extends React.Component {
         className="App"
         style={{ height: this.state.pageHeight, width: this.state.pageWidth }}
       >
-      <div className="crt" style={{ height: this.state.pageHeight, width: this.state.pageWidth}}>
-      <Sound
+        <div
+          className="crt"
+          style={{ height: this.state.pageHeight, width: this.state.pageWidth }}
+        >
+          <Sound
             url={computerSound}
             playStatus={Sound.status.PLAYING}
+            autoLoad={true}
             onLoading={this.handleSongLoading}
             onPlaying={this.handleSongPlaying}
             onFinishedPlaying={this.handleSongFinishedPlaying}
-          />        {this.state.introLoaded ? null : <Intro />}
-        {this.state.introLoaded ? <MainPage /> : null}
-        {this.state.introLoaded ? <NavBar /> : null}
+          />
+          {this.state.introLoaded ? null : <Intro />}
+          {this.state.introLoaded ? (
+            <Switch>
+              <Route exact path="/" component={MainPage} />
+              <Route exact path="/about" component={AboutPage} />
+            </Switch>
+          ) : null}
+          {this.state.introLoaded ? <NavBar /> : null}
         </div>
       </div>
     );

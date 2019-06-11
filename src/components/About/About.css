@@ -4,7 +4,7 @@ h1 {
   color: #39D202;
 }
 
-.main-page-div {
+.about-page-div {
   height: 70%;
   width: 100%;
   font-family: 'Press Start 2P', cursive;
@@ -15,9 +15,9 @@ h1 {
   align-items: center;
 }
 
-.main-page-div p {
+.about-page-div p{
   color: white;
-
+  line-height: 1.5;
 }
 
 #horizon_bg {
@@ -25,16 +25,19 @@ h1 {
   width: 70%;
 }
 
-.welcome-message {
+.introduction-div {
   /* background-color: black; */
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  text-align:justify;
   width: 70vw;
   height: 100vh;
   border: 2px solid #39D202;
+  padding: 2%;
+  float: left;
+  background-color: black;
 }
 
 #welcome-message-name {
@@ -52,6 +55,14 @@ h1 {
 #loading-message {
   font-family: 'Press Start 2P', cursive;
   color: white;
+}
+
+#portrait-img {
+  width: auto;
+  height: 50%;
+  border: 2px solid #39D202;
+  margin-right: 2%;
+  background-color: white;
 }
 
 .main-page-loading {

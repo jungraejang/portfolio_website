@@ -10,27 +10,32 @@ import "./NavBar.css";
         <NavLink
           style={{ textDecoration: "none" }}
           className="navlink"
+          to={"/"}
         >
           Home
         </NavLink>
         <NavLink
           style={{ textDecoration: "none" }}
           className="navlink"
+          to={"/about"}
+
         >
           About Me
         </NavLink>
         <NavLink
           style={{ textDecoration: "none" }}
-          className="navlink"
-        >
-          Contact
-        </NavLink>
-        <NavLink
-          style={{ textDecoration: "none" }}
-          to={"/songs/bygenre"}
+          to={"/projects"}
           className="navlink"
         >
           Projects
+        </NavLink>
+        <NavLink
+          style={{ textDecoration: "none" }}
+          className="navlink"
+          to={"/contact"}
+
+        >
+          Contact
         </NavLink>
       </div>
     </nav>

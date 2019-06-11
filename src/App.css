@@ -96,28 +96,28 @@ table {
     opacity: 0.23604;
   }
   15% {
-    opacity: 0.90626;
+    opacity: 0.50626;
   }
   20% {
     opacity: 0.18128;
   }
   25% {
-    opacity: 0.83891;
+    opacity: 0.50891;
   }
   30% {
-    opacity: 0.65583;
+    opacity: 0.50583;
   }
   35% {
-    opacity: 0.67807;
+    opacity: 0.50807;
   }
   40% {
     opacity: 0.26559;
   }
   45% {
-    opacity: 0.84693;
+    opacity: 0.50693;
   }
   50% {
-    opacity: 0.96019;
+    opacity: 0.50019;
   }
   55% {
     opacity: 0.08594;
@@ -126,7 +126,7 @@ table {
     opacity: 0.20313;
   }
   65% {
-    opacity: 0.71988;
+    opacity: 0.50988;
   }
   70% {
     opacity: 0.53455;
@@ -135,13 +135,13 @@ table {
     opacity: 0.37288;
   }
   80% {
-    opacity: 0.71428;
+    opacity: 0.50428;
   }
   85% {
-    opacity: 0.70419;
+    opacity: 0.50419;
   }
   90% {
-    opacity: 0.7003;
+    opacity: 0.50033;
   }
   95% {
     opacity: 0.36108;
@@ -244,7 +244,7 @@ table {
 }
 .crt {
   animation: textShadow 1.6s infinite;
-  background-color: #1600FF;
+  background-color: #1600ff;
   display: flex;
   flex-direction: column;
   justify-content: center;

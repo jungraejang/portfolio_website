@@ -1,10 +1,13 @@
 import React from "react";
 import Typist from 'react-typist';
 import "./MainPage.css";
+import horizon_bg from "../../assets/horizon-bg.png"
 const MainPage = () => {
   return (
     <div className="main-page-div">
       <p>2019 All Rights Reserved©</p>
+      <br />
+      <img src={horizon_bg} id="horizon_bg" />
       <br />
       <div className="welcome-message">
         <h1 id="welcome-message-name">Jung Rae Jang</h1>
