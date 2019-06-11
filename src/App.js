@@ -67,8 +67,8 @@ class App extends React.Component {
           {this.state.introLoaded ? null : <Intro />}
           {this.state.introLoaded ? (
             <Switch>
-              <Route exact path="/" component={MainPage} />
-              <Route exact path="/about" component={AboutPage} />
+              <Route exact path="/portfolio_website/" component={MainPage} />
+              <Route exact path="/portfolio_website/about" component={AboutPage} />
             </Switch>
           ) : null}
           {this.state.introLoaded ? <NavBar /> : null}
