@@ -1,46 +1,49 @@
 h1 {
   /* font-family: 'VT323', monospace; */
-  font-family: 'Press Start 2P', cursive;
-  color: #39D202;
+  font-family: "Press Start 2P", cursive;
+  color: #39d202;
 }
 
 .about-page-div {
-  height: 70%;
+  height: 60vh;
   width: 100%;
-  font-family: 'Press Start 2P', cursive;
-  color: #39D202;
+  font-family: "Press Start 2P", cursive;
+  color: #39d202;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-.about-page-div p{
+.about-page-div p {
   color: white;
   line-height: 1.5;
 }
 
 #horizon_bg {
   height: 50%;
-  width: 70%;
+  width: 90%;
 }
 
 .introduction-div {
   /* background-color: black; */
   display: flex;
-  /* justify-content: space-around; */
-  /* align-items: center; */
-  /* flex-direction: column; */
-  text-align:justify;
-  width: 70vw;
-  height: 100vh;
-  border: 2px solid #39D202;
+  /* justify-content: space-around;
+  align-items: center;
+  flex-direction: column; */
+  text-align: center;
+  flex-direction: row;
+  align-items: left;
+  width: 90%;
+  height: 100%;
+  border: 2px solid #39d202;
   padding: 2%;
   float: left;
   background-color: black;
+  overflow: scroll;
 }
 
-#welcome-message-name {
+/* #welcome-message-name {
   font-family: 'Press Start 2P', cursive;
   font-size: 60px;
   color: #39D202;
@@ -50,17 +53,17 @@ h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 30px;
   color: #07FAFA;
-}
+} */
 
 #loading-message {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   color: white;
 }
 
 #portrait-img {
-  width: auto;
-  height: 50%;
-  border: 2px solid #39D202;
+  width: 20%;
+  height: auto;
+  border: 2px solid #39d202;
   margin-right: 2%;
   background-color: white;
 }
@@ -72,4 +75,43 @@ h1 {
   height: auto;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .introduction-div {
+    /* background-color: black; */
+    display: flex;
+    /* justify-content: space-around;
+    align-items: center;
+    flex-direction: column; */
+    text-align: justify;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    border: 2px solid #39d202;
+    padding: 2%;
+    float: left;
+    background-color: black;
+    overflow: scroll;
+  }
+
+  .about-page-div {
+    height: 80vh;
+    width: 100%;
+    font-family: "Press Start 2P", cursive;
+    color: #39d202;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #portrait-img {
+    width: 70%;
+    height: auto;
+    border: 2px solid #39d202;
+    margin-right: 2%;
+    background-color: white;
+  }
 }

@@ -1,12 +1,10 @@
 import React from "react";
 import Typist from "react-typist";
 import "./About.css";
-import portrait from "../../assets/8bit-portrait.png";
+import portrait from "../../assets/8bit_portrait.png";
 const AboutPage = () => {
   return (
     <div className="about-page-div">
-      <p>2019 All Rights Reserved©</p>
-      <br />
       <div className="introduction-div">
         <img src={portrait} id="portrait-img" />
         <p>
@@ -21,12 +19,7 @@ const AboutPage = () => {
         </p>
       </div>
       <br />
-      <div className="main-page-loading">
-        <h1 id="loading-message">Loading</h1>
-        <Typist>
-          <h1 id="loading-message">........</h1>
-        </Typist>
-      </div>
+
       <br />
     </div>
   );

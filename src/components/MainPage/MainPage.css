@@ -1,14 +1,42 @@
+.blinking {
+  /* font-family: 'VT323', monospace; */
+  font-family: "Press Start 2P", cursive;
+  color: #39d202;
+  animation: blinkingText 1s infinite;
+}
+
 h1 {
   /* font-family: 'VT323', monospace; */
-  font-family: 'Press Start 2P', cursive;
-  color: #39D202;
+  font-family: "Press Start 2P", cursive;
+  color: #39d202;
+}
+
+@keyframes blinkingText {
+  0% {
+    color: #39d202;
+  }
+  45% {
+    color: #39d202;
+  }
+  50% {
+    color: white;
+  }
+  55% {
+    color: #39d202;
+  }
+  99% {
+    color: #39d202;
+  }
+  100% {
+    color: #39d202;
+  }
 }
 
 .main-page-div {
   height: 70%;
-  width: 100%;
-  font-family: 'Press Start 2P', cursive;
-  color: #39D202;
+  width: 90%;
+  font-family: "Press Start 2P", cursive;
+  color: #39d202;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -17,40 +45,38 @@ h1 {
 
 .main-page-div p {
   color: white;
-
 }
 
 #horizon_bg {
   height: 50%;
-  width: 70%;
+  width: 90%;
 }
 
 .welcome-message {
-  /* background-color: black; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  width: 70vw;
-  height: 100vh;
-  border: 2px solid #39D202;
+  width: 90vw;
+  height: 40%;
+  border: 2px solid #39d202;
 }
 
 #welcome-message-name {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 60px;
-  color: #39D202;
+  font-family: "Press Start 2P", cursive;
+  font-size: 40px;
+  color: #39d202;
 }
 
 #welcome-message-name2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 30px;
-  color: #07FAFA;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  color: #07fafa;
 }
 
 #loading-message {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   color: white;
 }
 
@@ -61,4 +87,14 @@ h1 {
   height: auto;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #welcome-message-name {
+    font-size: 30px;
+  }
+
+  #welcome-message-name2 {
+    font-size: 20px;
+  }
 }

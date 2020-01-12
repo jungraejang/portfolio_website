@@ -4,7 +4,7 @@ import Sound from "react-sound";
 import logo from "./logo.svg";
 import "./App.css";
 import MainPage from "./components/MainPage/MainPage";
-import AboutPage from "./components/About/About"
+import AboutPage from "./components/About/About";
 import NavBar from "./components/NavBar/NavBar";
 import Intro from "./components/Intro/Intro";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -14,7 +14,6 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      random: "lalalala",
       pageHeight: 0,
       pageWidth: 0,
       introLoaded: false
@@ -47,6 +46,7 @@ class App extends React.Component {
   };
 
   render() {
+    console.log("page dimensions", this.state.pageWidth, this.state.pageHeight);
     return (
       <div
         className="App"
@@ -58,6 +58,7 @@ class App extends React.Component {
         >
           <Sound
             url={computerSound}
+            ignoreMobileRestrictions={true}
             playStatus={Sound.status.PLAYING}
             autoLoad={true}
             onLoading={this.handleSongLoading}
@@ -67,8 +68,21 @@ class App extends React.Component {
           {this.state.introLoaded ? null : <Intro />}
           {this.state.introLoaded ? (
             <Switch>
-              <Route exact path={process.env.PUBLIC_URL + '/'} component={MainPage} />
-              <Route exact path={process.env.PUBLIC_URL + '/about'} component={AboutPage} />
+              <Route
+                exact
+                path={process.env.PUBLIC_URL + "/"}
+                component={() => (
+                  <MainPage
+                    pageWidth={this.state.pageWidth}
+                    pageHeight={this.state.pageHeight}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path={process.env.PUBLIC_URL + "/about"}
+                component={AboutPage}
+              />
             </Switch>
           ) : null}
           {this.state.introLoaded ? <NavBar /> : null}

@@ -1,11 +1,19 @@
 import React from "react";
-import Typist from 'react-typist';
+import Typist from "react-typist";
 import "./MainPage.css";
-import horizon_bg from "../../assets/horizon-bg.png"
-const MainPage = () => {
+import horizon_bg from "../../assets/8bit_bg.png";
+const MainPage = props => {
+  console.log("main page prop", props);
+  let cursor = {
+    show: false,
+    blink: true,
+    element: "|",
+    hideWhenDone: false,
+    hideWhenDoneDelay: 1000
+  };
+
   return (
     <div className="main-page-div">
-      <p>2019 All Rights Reserved©</p>
       <br />
       <img src={horizon_bg} id="horizon_bg" />
       <br />
@@ -15,10 +23,11 @@ const MainPage = () => {
       </div>
       <br />
       <div className="main-page-loading">
-      <h1 id="loading-message">Loading</h1>
-      <Typist>
-      <h1 id="loading-message">........</h1>
-      </Typist>
+        <Typist cursor={cursor}>
+          <h1 id="loading-message" className="blinking">
+            Data Loaded
+          </h1>
+        </Typist>
       </div>
       <br />
     </div>
