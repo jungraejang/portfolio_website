@@ -78,11 +78,7 @@ class App extends React.Component {
                   />
                 )}
               />
-              <Route
-                exact
-                path={process.env.PUBLIC_URL + "/about"}
-                component={AboutPage}
-              />
+              <Route exact path={"/about"} component={AboutPage} />
             </Switch>
           ) : null}
           {this.state.introLoaded ? <NavBar /> : null}
