@@ -47,6 +47,7 @@ class App extends React.Component {
 
   render() {
     console.log("page dimensions", this.state.pageWidth, this.state.pageHeight);
+    console.log("process.env", process.env);
     return (
       <div
         className="App"
@@ -69,7 +70,7 @@ class App extends React.Component {
             <Switch>
               <Route
                 exact
-                path={process.env.PUBLIC_URL + "/"}
+                path={"/"}
                 component={() => (
                   <MainPage
                     pageWidth={this.state.pageWidth}
@@ -77,11 +78,7 @@ class App extends React.Component {
                   />
                 )}
               />
-              <Route
-                exact
-                path={process.env.PUBLIC_URL + "/about"}
-                component={AboutPage}
-              />
+              <Route exact path={"/about"} component={AboutPage} />
             </Switch>
           ) : (
             <Intro />

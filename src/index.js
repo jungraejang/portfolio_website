@@ -6,7 +6,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <HashRouter>
+  <HashRouter hashType={"noslash"}>
     <App />
   </HashRouter>,
   document.getElementById("root")
