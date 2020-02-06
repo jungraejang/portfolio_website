@@ -65,7 +65,6 @@ class App extends React.Component {
             onPlaying={this.handleSongPlaying}
             onFinishedPlaying={this.handleSongFinishedPlaying}
           />
-          {this.state.introLoaded ? null : <Intro />}
           {this.state.introLoaded ? (
             <Switch>
               <Route
@@ -78,9 +77,15 @@ class App extends React.Component {
                   />
                 )}
               />
-              <Route exact path={"/about"} component={AboutPage} />
+              <Route
+                exact
+                path={process.env.PUBLIC_URL + "/about"}
+                component={AboutPage}
+              />
             </Switch>
-          ) : null}
+          ) : (
+            <Intro />
+          )}
           {this.state.introLoaded ? <NavBar /> : null}
         </div>
       </div>
