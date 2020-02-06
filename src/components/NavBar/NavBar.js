@@ -10,14 +10,14 @@ const NavBar = () => {
         <NavLink
           style={{ textDecoration: "none" }}
           className="navlink"
-          to={process.env.PUBLIC_URL + "/"}
+          to={"/"}
         >
           Home
         </NavLink>
         <NavLink
           style={{ textDecoration: "none" }}
           className="navlink"
-          to={process.env.PUBLIC_URL + "/about"}
+          to={"/about"}
         >
           About
         </NavLink>
