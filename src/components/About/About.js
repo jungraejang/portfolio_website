@@ -7,16 +7,37 @@ const AboutPage = () => {
     <div className="about-page-div">
       <div className="introduction-div">
         <img src={portrait} id="portrait-img" />
-        <p>
-          My name is Jung Rae Jang also known as JR. I’m a proud immigrant from
-          South Korea. Before joining Pursuit, I worked as a Community Organizer
-          for non-profits/New York City government, focusing on issues such as
-          immigration and affordable housing. Throughout my work, I realized
-          that I had strong passion for creating and making a difference. I
-          jumped into the tech industry wishing to combine these two passions.
-          In the future, it is my dream to become a developer who works directly
-          with Artificial Intelligence.
-        </p>
+        <div className="about-content">
+          <p>
+            <span className="white-text">Name: </span>
+            <span className="green-text">Jung Rae Jang</span>
+          </p>
+          <br />
+          <p>
+            <span className="white-text">About Me: </span>
+            <span className="green-text">
+              I’ve always been drawn to creating cool stuff whether they are
+              technical or artistic in nature. As a software developer, I enjoy
+              analyzing problems and sharing creative solutions to improve both
+              myself and those around me. I like to tinker with Raspberry Pi or
+              print cool 3D scultures during my free time. I am also an avid
+              gamer who enjoys playing Starcraft 2, Dota 2, and Civilization
+              series.
+            </span>
+          </p>
+          <p className="white-text">Technical Skills:</p>
+          <ul style={{ listStyleType: "disc", marginLeft: "20px"}}>
+            <li>Javascript</li>
+            <li>Python</li>
+            <li>React JS</li>
+            <li>Node/Express</li>
+            <li>HTML5/CSS3</li>
+            <li>PostgreSQL/MongoDB</li>
+            <li>Django</li>
+            <li>Flask</li>
+            <li>Adobe Photoshop</li>
+          </ul>
+        </div>
       </div>
       <br />
 

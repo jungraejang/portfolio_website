@@ -19,6 +19,7 @@ const MainPage = props => {
       <br />
       <div className="welcome-message">
         <h1 id="welcome-message-name">Jung Rae Jang</h1>
+        <h2 id="welcome-message-name2">Full Stack</h2>
         <h2 id="welcome-message-name2">Web Developer</h2>
       </div>
       <br />

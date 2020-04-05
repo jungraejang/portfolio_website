@@ -5,6 +5,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import MainPage from "./components/MainPage/MainPage";
 import AboutPage from "./components/About/About";
+import ContactPage from "./components/Contact/Contact";
+
 import NavBar from "./components/NavBar/NavBar";
 import Intro from "./components/Intro/Intro";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -57,7 +59,7 @@ class App extends React.Component {
           className="crt"
           style={{ height: this.state.pageHeight, width: this.state.pageWidth }}
         >
-          <Sound
+          {/* <Sound
             url={computerSound}
             ignoreMobileRestrictions={true}
             playStatus={Sound.status.PLAYING}
@@ -65,7 +67,7 @@ class App extends React.Component {
             onLoading={this.handleSongLoading}
             onPlaying={this.handleSongPlaying}
             onFinishedPlaying={this.handleSongFinishedPlaying}
-          />
+          /> */}
           {this.state.introLoaded ? (
             <Switch>
               <Route
@@ -79,6 +81,8 @@ class App extends React.Component {
                 )}
               />
               <Route exact path={"/about"} component={AboutPage} />
+              <Route exact path={"/contact"} component={ContactPage} />
+
             </Switch>
           ) : (
             <Intro />
