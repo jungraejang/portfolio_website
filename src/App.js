@@ -70,8 +70,10 @@ class App extends React.Component {
           />
           {this.state.introLoaded ? (
             <Switch>
+              <Route exact path={"/about"} component={AboutPage} />
+              <Route exact path={"/contact"} component={ContactPage} />
+              <Route exact path={"/projects"} component={ProjectPage} />
               <Route
-                exact
                 path={"/"}
                 component={() => (
                   <MainPage
@@ -80,9 +82,6 @@ class App extends React.Component {
                   />
                 )}
               />
-              <Route exact path={"/about"} component={AboutPage} />
-              <Route exact path={"/contact"} component={ContactPage} />
-              <Route exact path={"/projects"} component={ProjectPage} />
             </Switch>
           ) : (
             <Intro />
