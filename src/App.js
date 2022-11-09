@@ -6,7 +6,7 @@ import "./App.css";
 import MainPage from "./components/MainPage/MainPage";
 import AboutPage from "./components/About/About";
 import ContactPage from "./components/Contact/Contact";
-
+import ProjectPage from "./components/Project/Project.jsx";
 import NavBar from "./components/NavBar/NavBar";
 import Intro from "./components/Intro/Intro";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -18,7 +18,7 @@ class App extends React.Component {
     this.state = {
       pageHeight: 0,
       pageWidth: 0,
-      introLoaded: false
+      introLoaded: false,
     };
   }
 
@@ -35,14 +35,14 @@ class App extends React.Component {
   updateWindowDimensions = () => {
     this.setState({
       pageWidth: window.innerWidth,
-      pageHeight: window.innerHeight
+      pageHeight: window.innerHeight,
     });
   };
 
   loadingComplete = () => {
     setTimeout(() => {
       this.setState({
-        introLoaded: true
+        introLoaded: true,
       });
     }, 5500);
   };
@@ -82,7 +82,7 @@ class App extends React.Component {
               />
               <Route exact path={"/about"} component={AboutPage} />
               <Route exact path={"/contact"} component={ContactPage} />
-
+              <Route exact path={"/projects"} component={ProjectPage} />
             </Switch>
           ) : (
             <Intro />
