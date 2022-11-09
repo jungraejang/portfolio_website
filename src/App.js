@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, HashRouter } from "react-router-dom";
 import Sound from "react-sound";
 import logo from "./logo.svg";
 import "./App.css";
@@ -69,7 +69,7 @@ class App extends React.Component {
             onFinishedPlaying={this.handleSongFinishedPlaying}
           />
           {this.state.introLoaded ? (
-            <Switch>
+            <HashRouter>
               <Route exact path={"/about"} component={AboutPage} />
               <Route exact path={"/contact"} component={ContactPage} />
               <Route exact path={"/projects"} component={ProjectPage} />
@@ -82,7 +82,7 @@ class App extends React.Component {
                   />
                 )}
               />
-            </Switch>
+            </HashRouter>
           ) : (
             <Intro />
           )}
