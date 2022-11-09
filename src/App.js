@@ -74,15 +74,6 @@ class App extends React.Component {
               <Route exact path={"/contact"} component={ContactPage} />
               <Route exact path={"/projects"} component={ProjectPage} />
               <Route
-                path={"/"}
-                component={() => (
-                  <MainPage
-                    pageWidth={this.state.pageWidth}
-                    pageHeight={this.state.pageHeight}
-                  />
-                )}
-              />
-              <Route
                 path={"*"}
                 component={() => (
                   <MainPage
