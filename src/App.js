@@ -82,6 +82,15 @@ class App extends React.Component {
                   />
                 )}
               />
+              <Route
+                path={"*"}
+                component={() => (
+                  <MainPage
+                    pageWidth={this.state.pageWidth}
+                    pageHeight={this.state.pageHeight}
+                  />
+                )}
+              />
             </HashRouter>
           ) : (
             <Intro />
