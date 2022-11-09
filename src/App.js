@@ -59,7 +59,7 @@ class App extends React.Component {
           className="crt"
           style={{ height: this.state.pageHeight, width: this.state.pageWidth }}
         >
-          {/* <Sound
+          <Sound
             url={computerSound}
             ignoreMobileRestrictions={true}
             playStatus={Sound.status.PLAYING}
@@ -67,7 +67,7 @@ class App extends React.Component {
             onLoading={this.handleSongLoading}
             onPlaying={this.handleSongPlaying}
             onFinishedPlaying={this.handleSongFinishedPlaying}
-          /> */}
+          />
           {this.state.introLoaded ? (
             <Switch>
               <Route
