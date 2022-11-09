@@ -69,10 +69,19 @@ class App extends React.Component {
             onFinishedPlaying={this.handleSongFinishedPlaying}
           />
           {this.state.introLoaded ? (
-            <HashRouter>
+            <Switch>
               <Route exact path={"/about"} component={AboutPage} />
               <Route exact path={"/contact"} component={ContactPage} />
               <Route exact path={"/projects"} component={ProjectPage} />
+              {/* <Route
+                path={"/"}
+                component={() => (
+                  <MainPage
+                    pageWidth={this.state.pageWidth}
+                    pageHeight={this.state.pageHeight}
+                  />
+                )}
+              /> */}
               <Route
                 path={"*"}
                 component={() => (
@@ -82,7 +91,7 @@ class App extends React.Component {
                   />
                 )}
               />
-            </HashRouter>
+            </Switch>
           ) : (
             <Intro />
           )}
